@@ -100,7 +100,7 @@ const convertCurrency = (money) => {
  * @param trim小数位数是否舍0,true舍0,false或不传不舍0
  * @returns 4,222.34或者 4222.34
  */
-const fmoney = (s, n, comma, f,trim) => {
+const formatMoney = (s, n, comma, f,trim) => {
     var flag = '0',
         result;  //  是否带逗号
     if (!s || s == "") {
