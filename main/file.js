@@ -12,9 +12,10 @@ const dataURLtoBlob = (dataurl) => {
 }
   // 将blob转换为file
 const blobToFile = (theBlob, fileName) => {
-    theBlob.lastModifiedDate = new Date();
-    theBlob.name = fileName;
-    return theBlob;
+  return new File([theBlob], fileName, {
+    lastModifiedDate: new Date(),
+    type: theBlob.type
+  })
 }
 
 // a链接下载
